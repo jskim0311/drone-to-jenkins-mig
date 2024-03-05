@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  test:
+    image: node:12.16.1
+    command: node --version
+    depends_on:
+      - mysql
+  mysql:
+    image: mysql:5.7.33
+    command: sh -c 'echo "Hello World! $$PORT"'
+    environment:
+      - PORT=8888
