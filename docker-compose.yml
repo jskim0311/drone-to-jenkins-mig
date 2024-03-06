@@ -2,7 +2,7 @@ version: '3.7'
 services:
   test:
     image: node:12.16.1
-    command: error-test
+    command: sh -c 'unknown command error-test'
     depends_on:
       - mysql
   mysql:
